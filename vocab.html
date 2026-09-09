@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vocabWeb | 英文單字學習網站</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>單字網 Vocab Web</h1>
+        <p class="slogan">Expand your vocabulary. Expand your world.</p>
+        <nav class="tab">
+            <button class="tab-btn tab-btn-active" data-tab="card">單字卡</button>
+            <button class="tab-btn" data-tab="card">測驗</button>
+            <button class="tab-btn" data-tab="card">進度</button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="flashcard" id="flashcard"> 
+                <div class="card-inner">
+                    <div class="card-face card-back">
+                        <p class="loading" id="loading">載入中...</p>
+                        <p class="hint">點一下卡片翻面</p>
+                    </div>
+                    <div class="card-face card-back">
+                        <p class="zh" id="cardMeaning"></p>
+                        <p class="example" id="cardExample"></p>
+                    </div>
+                </div>
+            </div>
+            <p class="counter" id="counter"></p>
+            <div class="ctrl">
+                <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="shuffleBtn"><i class="fa-solid fa-shuffle"></i></button>
+                <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+        
+        <section class="page" id="quiz">
+            <p class="sub-text">a</p>
+        </section>
+
+        <section class="page" id="progress">
+             <p class="sub-text">b</p> 
+        </section>
+    </main>
+    <footer class="end">© 2026 劉子翊</footer>
+
+    <script src="word.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
