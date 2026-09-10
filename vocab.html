@@ -20,24 +20,24 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="page active" id="card">
             <div class="flashcard" id="flashcard"> 
                 <div class="card-inner">
-                    <div class="card-face card-back">
-                        <p class="loading" id="loading">載入中...</p>
+                    <div class="card-face card-front">
+                        <p class="en" id="cardWord">載入中...</p>
                         <p class="hint">點一下卡片翻面</p>
                     </div>
                     <div class="card-face card-back">
                         <p class="zh" id="cardMeaning"></p>
-                        <p class="example" id="cardExample"></p>
+                        <p class="example" id="cardExample">,</p>
                     </div>
                 </div>
             </div>
-            <p class="counter" id="counter"></p>
+            <p class="counter" id="cardCounter"></p>
             <div class="ctrl">
-                <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
-                <button id="shuffleBtn"><i class="fa-solid fa-shuffle"></i></button>
-                <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i>上一張</button>
+                <button id="shuffleBtn"><i class="fa-solid fa-shuffle"></i>洗牌</button>
+                <button id="nextBtn">下一張<i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </section>
         
@@ -51,7 +51,7 @@
     </main>
     <footer class="end">© 2026 劉子翊</footer>
 
-    <script src="word.js"></script>
+    <script src="words.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
