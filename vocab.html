@@ -15,8 +15,8 @@
         <p class="slogan">Expand your vocabulary. Expand your world.</p>
         <nav class="tab">
             <button class="tab-btn tab-btn-active" data-tab="card">單字卡</button>
-            <button class="tab-btn" data-tab="card">測驗</button>
-            <button class="tab-btn" data-tab="card">進度</button>
+            <button class="tab-btn" data-tab="quiz">測驗</button>
+            <button class="tab-btn" data-tab="progress">進度</button>
         </nav>
     </header>
     <main>
@@ -42,7 +42,25 @@
         </section>
         
         <section class="page" id="quiz">
-            <p class="sub-text">a</p>
+            <div id="quizStart">
+                <p class="quiz-intro">每輪10題, 選出正確的中文意思</p>
+                <button id="startQuizBtn" class="big-btn">開始測驗</button>
+            </div>
+
+            <div class="hidden" id="quizMain">
+                <p id="quizInfo" class="quiz-info"></p>
+                <p id="question" class="question"></p>
+
+                <div id="options"></div>
+                <button id="nextQBtn" class="big-btn hidden">下一題<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="hidden" id="quizEnd">
+                <h2>測驗結束!</h2>
+                <p id="finalScore" class="final-score"></p>
+                <p id="finalMsg"></p>
+                <button id="restartBtn" class="big-btn">再玩一次</button>
+            </div>
+
         </section>
 
         <section class="page" id="progress">
@@ -53,5 +71,7 @@
 
     <script src="words.js"></script>
     <script src="app.js"></script>
+    <script src="quiz.js"></script>
+</body>
 </body>
 </html>

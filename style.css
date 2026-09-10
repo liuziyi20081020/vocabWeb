@@ -167,6 +167,87 @@ header h1 {
     transform: translateY(-2px);
 }
 
+.hidden {
+    display: none;
+}
+
+.quiz-intro {
+    text-align: center;
+    color: var(--text);
+    margin: 30px 0 20px;
+}
+
+.quiz-info {
+    text-align: center;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.question {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--main);
+    margin: 18px 0 24px;
+}
+
+#options {
+    display: grid;
+    gap: 12px;
+}
+
+.option {
+    padding: 14px 18px;
+    font-size: 18px;
+    text-align: left;
+    background-color: var(--accent);
+    border: 2px solid --bg;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+
+.option:hover{
+    border-color: #333;
+}
+
+.option.correct {
+    background-color: var(--main);
+    border-color: purple;
+    color: white;
+}
+
+.option.wrong {
+    background-color: var(--accent);
+    border-color: purple;
+    color: white;
+}
+
+.big-btn {
+    display: block;
+    margin: 24px auto 0;
+    padding: 12px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--main);
+    cursor: pointer;
+}
+
+.final-score {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+#quizEnd h2, #quizEnd p {
+    text-align: center;
+}
+
+
+
 footer {
     text-align: center;
     color: var(--text);
