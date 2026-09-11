@@ -42,8 +42,15 @@
         </section>
         
         <section class="page" id="quiz">
-            <div id="quizStart">
-                <p class="quiz-intro">每輪10題, 選出正確的中文意思</p>
+            
+            <div id="quizStart" class="quiz-start">
+                <select id="modeSelect" class="mode-select">
+                    <option value="enToZh">英翻中</option>
+                    <option value="zhToEn">中翻英</option>
+                    <option value="random">隨機</option>
+                </select>
+
+                <p class="quiz-intro">每輪10題, 選出正確的意思</p>
                 <button id="startQuizBtn" class="big-btn">開始測驗</button>
             </div>
 

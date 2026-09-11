@@ -87,7 +87,7 @@ header h1 {
 }
 
 .flashcard.flipped .card-inner {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .card-face {
@@ -112,7 +112,7 @@ header h1 {
 .card-back {
     background-color: var(--text);
     color: var(--main);
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .en {
@@ -171,10 +171,26 @@ header h1 {
     display: none;
 }
 
+.quiz-start {
+    padding: 60px;
+    background-color: var(--main);
+    border-radius: 12px;
+}
+
 .quiz-intro {
     text-align: center;
     color: var(--text);
-    margin: 30px 0 20px;
+    margin: 10px 0;
+}
+
+.mode-select {
+    background-color: var(--bg);
+    color: var(--accent);
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    width: fit-content;
+    margin-left: -20px;
+
 }
 
 .quiz-info {
@@ -182,6 +198,8 @@ header h1 {
     color: var(--text);
     font-size: 14px;
 }
+
+
 
 .question {
     text-align: center;
@@ -214,13 +232,13 @@ header h1 {
 
 .option.correct {
     background-color: var(--main);
-    border-color: purple;
+    border-color: var(--text);
     color: white;
 }
 
 .option.wrong {
     background-color: var(--accent);
-    border-color: purple;
+    border-color: #fff;
     color: white;
 }
 
@@ -231,8 +249,16 @@ header h1 {
     font-size: 16px;
     border: none;
     border-radius: 999px;
-    background-color: var(--main);
+    background-color: var(--text);
+    color: var(--accent);
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.big-btn:hover {
+    background-color: var(--accent);
+    color: var(--text);
+    transform: translateY(-2px);
 }
 
 .final-score {
