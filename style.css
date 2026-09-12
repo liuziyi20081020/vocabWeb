@@ -149,9 +149,11 @@ header h1 {
     justify-content: center;
     gap: 12px;
     margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.ctrl button {
+.ctrlBtn {
     padding: 10px 20px;
     font-size: 15px;
     border: none;
@@ -163,9 +165,39 @@ header h1 {
     transition: transform .15s;
 }
 
-.ctrl button:hover {
+.ctrlBtn:hover {
     transform: translateY(-2px);
 }
+
+.learn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+.learn-btn {
+    min-width: 120px;
+    display: inline-block;
+    white-space: nowrap;
+    width: fit-content;
+    padding: 8px 20px;
+    font-size: 15px;
+    border: 2px solid var(--main);
+    border-radius: 12px;
+    background-color: var(--text);
+    color: var(--main);
+    cursor: pointer;
+    transition: all .25s ease;
+    
+}
+
+.learn-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+
 
 .hidden {
     display: none;
@@ -173,8 +205,8 @@ header h1 {
 
 .quiz-start {
     padding: 60px;
-    background-color: var(--main);
-    border-radius: 12px;
+    background: linear-gradient(var(--main) 20%, #8c88ae 80%);
+        border-radius: 12px;
 }
 
 .quiz-intro {
@@ -184,7 +216,7 @@ header h1 {
 }
 
 .mode-select {
-    background-color: var(--bg);
+    background-color: #333;
     color: var(--accent);
     padding: 8px 8px;
     margin-bottom: 10px;
@@ -192,6 +224,14 @@ header h1 {
     margin-left: -20px;
 
 }
+
+select{
+    color: var(--main);
+}
+
+/* select option:hover, select option:focus {
+    color: var(--main);
+} */
 
 .quiz-info {
     text-align: center;
@@ -218,28 +258,29 @@ header h1 {
     padding: 14px 18px;
     font-size: 18px;
     text-align: left;
-    background-color: var(--accent);
-    border: 2px solid --bg;
+
+    background-color: var(--text);
+    color: var(--accent);
+    border: 2px solid var(--bg);
     border-radius: 12px;
     cursor: pointer;
     transition: all .2s;
-
 }
 
 .option:hover{
-    border-color: #333;
+    border-color: var(--text);
 }
 
 .option.correct {
-    background-color: var(--main);
-    border-color: var(--text);
-    color: white;
+    background-color: #0a1900;
+    border-color: green;
+    color: var(--accent);
 }
 
 .option.wrong {
-    background-color: var(--accent);
-    border-color: #fff;
-    color: white;
+    background-color: #140000;
+    border-color: rgb(213, 139, 139);
+    color: var(--accent);
 }
 
 .big-btn {
@@ -274,9 +315,80 @@ header h1 {
 
 
 
+.progress-title {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 30px;
+    color: var(--main);
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: var(--text);
+    border-radius: 999px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--main);
+    border-radius: 999px;
+    transition: width .6s ease;
+
+}
+
+.progress-text {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.list-title {
+    color: var(--accent);
+    margin: 24px 0;
+}
+
+.learned-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.learned-list li {
+    background-color: var(--accent);
+    color: var(--text);
+    border: 2px solid var(--main);
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.reset-btn {
+    display: block;
+    margin: 28px auto 0;
+    padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid var(--main);
+    border-radius: 8px;
+    background-color: var(--text);
+    color: var(--main);
+    cursor: pointer;
+}
+
+
+
 footer {
     text-align: center;
     color: var(--text);
     font-size: 14px;
     padding: 40px 0 24px;
 }
+
+
+
+
+
+

@@ -35,19 +35,27 @@
             </div>
             <p class="counter" id="cardCounter"></p>
             <div class="ctrl">
-                <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i>上一張</button>
-                <button id="shuffleBtn"><i class="fa-solid fa-shuffle"></i>洗牌</button>
-                <button id="nextBtn">下一張<i class="fa-solid fa-arrow-right"></i></button>
+                <button id="prevBtn" class="ctrlBtn"><i class="fa-solid fa-arrow-left"></i>上一張</button>
+                <button id="shuffleBtn" class="ctrlBtn"><i class="fa-solid fa-shuffle"></i>洗牌</button>
+                <button id="nextBtn" class="ctrlBtn">下一張<i class="fa-solid fa-arrow-right"></i></button>  
             </div>
+
+            <div class="learn">
+                <button id="learnBtn" class="learn-btn">我學會了!</button>
+                <button id="reviewModeBtn" class="learn-btn"><i class="fa-solid fa-repeat"></i> 只看還沒學會的:關</button> 
+
+            </div>
+            
+
         </section>
         
         <section class="page" id="quiz">
             
             <div id="quizStart" class="quiz-start">
                 <select id="modeSelect" class="mode-select">
-                    <option value="enToZh">英翻中</option>
-                    <option value="zhToEn">中翻英</option>
-                    <option value="random">隨機</option>
+                    <option value="enToZh" class="mode">英翻中</option>
+                    <option value="zhToEn" class="mode">中翻英</option>
+                    <option value="random" class="mode">隨機</option>
                 </select>
 
                 <p class="quiz-intro">每輪10題, 選出正確的意思</p>
@@ -71,14 +79,25 @@
         </section>
 
         <section class="page" id="progress">
-             <p class="sub-text">b</p> 
+            <h2 class="progress-title">我的學習進度</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText"></p>
+            <h3 class="list-title">已學會的單字</h3>
+            <ul class="learned-list" id="learnedList"></ul> 
+            <button class="reset-btn" id="resetBtn">清除所有紀錄</button>
         </section>
+
     </main>
+
     <footer class="end">© 2026 劉子翊</footer>
 
     <script src="words.js"></script>
     <script src="app.js"></script>
     <script src="quiz.js"></script>
+    <script src="process.js"></script>
+
 </body>
 </body>
 </html>

@@ -22,20 +22,22 @@ showCard();
 
 
 document.querySelector("#nextBtn").addEventListener("click", function() {
-    index += 1;
-    if(index >= words.length) {
-        index = 0;
-    }
-    showCard(); 
+    moveCard(1, false);
+    // index += 1;
+    // if(index >= words.length) {
+    //     index = 0;
+    // }
+    // showCard(); 
 
-})
+});
 
 document.querySelector("#prevBtn").addEventListener("click", function() {
-    index -= 1;
-    if(index < 0) {
-        index = words.length - 1;
-    }
-    showCard(); 
+    moveCard(-1, false);
+    // index -= 1;
+    // if(index < 0) {
+    //     index = words.length - 1;
+    // }
+    // showCard(); 
 })
 
 document.querySelector("#shuffleBtn").addEventListener("click", function() {
