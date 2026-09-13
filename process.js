@@ -98,6 +98,22 @@ reviewModeBtn.addEventListener("click", function() {
         }
 });
 
+let darkLight = false;
+const darkLightBtn = document.querySelector("#darkLightBtn");
+
+darkLightBtn.addEventListener("click", function() {
+    darkLight = !darkLight;
+
+    document.body.classList.toggle("light-mode", darkLight);
+        if(darkLight) {
+            darkLightBtn.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        } else{
+            darkLightBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+});
+
+
+
 function moveCard(direction, allowStay) {
     let steps = 0;
     let i = index;
