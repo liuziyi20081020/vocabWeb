@@ -206,28 +206,45 @@ header h1 {
 .quiz-start {
     padding: 60px;
     background: linear-gradient(var(--main) 20%, #8c88ae 80%);
-        border-radius: 12px;
+    border-radius: 12px;
 }
 
 .quiz-intro {
     text-align: center;
     color: var(--text);
-    margin: 10px 0;
+    margin:20px 0;
+}
+
+.quiz-options {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .mode-select {
-    background-color: #333;
-    color: var(--accent);
-    padding: 8px 8px;
-    margin-bottom: 10px;
-    width: fit-content;
-    margin-left: -20px;
-
-}
-
-select{
+    background-color: var(--text);
     color: var(--main);
+    padding: 8px 8px;
+    /* margin-bottom: 10px; */
+    width: fit-content;
+    /* margin-left: -20px; */
+
 }
+
+.count-select {
+    background-color: var(--text);
+    color: var(--main);
+    padding: 8px 8px;
+    /* margin-bottom: 10px; */
+    width: fit-content;
+    /* margin-left: -20px; */
+
+}
+
+/* select{
+    color: var(--main);
+} */
 
 /* select option:hover, select option:focus {
     color: var(--main);
@@ -285,7 +302,7 @@ select{
 
 .big-btn {
     display: block;
-    margin: 24px auto 0;
+    margin: 32px auto 0;
     padding: 12px 40px;
     font-size: 16px;
     border: none;
@@ -341,12 +358,13 @@ select{
 
 .progress-text {
     text-align: center;
-    color: var(--accent);
+    color: var(--main);
     margin-bottom: 10px;
 }
 
 .list-title {
     color: var(--accent);
+    text-align: center;
     margin: 24px 0;
 }
 
@@ -358,9 +376,9 @@ select{
 }
 
 .learned-list li {
-    background-color: var(--accent);
+    background-color: var(--main);
     color: var(--text);
-    border: 2px solid var(--main);
+    border: 2px solid var(--text);
     padding: 4px 14px;
     border-radius: 999px;
     font-size: 14px;
@@ -371,14 +389,16 @@ select{
     margin: 28px auto 0;
     padding: 8px 20px;
     font-size: 14px;
-    border: 2px solid var(--main);
+    border: 2px solid var(--accent);
     border-radius: 8px;
     background-color: var(--text);
-    color: var(--main);
+    color: var(--accent);
     cursor: pointer;
 }
 
-
+.reset-btn:hover {
+    transform: translateY(-2px);
+}
 
 footer {
     text-align: center;

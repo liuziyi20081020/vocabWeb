@@ -1,4 +1,4 @@
-const quizTotal = 10;
+let quizTotal = 10;
 let quizWords = [];
 let currentQ = 0;
 let score = 0;
@@ -26,6 +26,12 @@ function startQuiz() {
     if(modeSelect) {
         quizMode = modeSelect.value;
     }
+   
+    const countSelect = document.querySelector("#countSelect");
+    if(countSelect) {
+        quizTotal = parseInt(countSelect.value, 10);
+    }
+
     quizWords = shuffled(words).slice(0, quizTotal);
     currentQ = 0;
     score = 0;
@@ -74,16 +80,6 @@ function showQuestion() {
         currentAns = q.meaning;
     }
 
-    // const reverse = Math.random() < 0.5;
-
-    // if(reverse) {
-    //     question.textContent = q.meaning;
-    //     currentAns = q.word;
-    // } else {
-    //     question.textContent = q.word;
-    //     currentAns = q.meaning;
-    // }
-    
     quizInfo.textContent = `第${currentQ + 1} / ${quizTotal} 題 | 目前得分 ${score}`;
 
     options.innerHTML = "";
@@ -119,7 +115,7 @@ function checkAnswer(btn, q) {
         });
     }
 
-    quizInfo.textContent = `第${currentQ + 1} / ${quizTotal} 題 | 目前得分 ${score}`;
+    quizTotal.textContent = `第${currentQ + 1} / ${quizTotal} 題 | 目前得分 ${score}`;
     nextQBtn.disabled = false;
     nextQBtn.classList.remove("hidden");
 }
@@ -150,12 +146,6 @@ function showResult() {
     const finalMsg = document.querySelector("#finalMsg");
     if(score === quizTotal) {
         finalMsg.innerHTML = `100分!<i class="fa-solid fa-trophy"></i>`;
-    } else if(score >= 7) {
-        finalMsg.textContent = `繼續加油!`;
-    } else if(score >= 4) {
-        finalMsg.textContent = `請認真背單字!!`;
-    } else {
-        finalMsg.textContent = `每個單字發抄10次!`;
-    }
-}
+    };
+};
 

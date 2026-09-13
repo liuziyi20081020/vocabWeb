@@ -51,13 +51,29 @@
         <section class="page" id="quiz">
             
             <div id="quizStart" class="quiz-start">
-                <select id="modeSelect" class="mode-select">
-                    <option value="enToZh" class="mode">英翻中</option>
-                    <option value="zhToEn" class="mode">中翻英</option>
-                    <option value="random" class="mode">隨機</option>
-                </select>
+                <div class="quiz-options">
+                    <select id="modeSelect" class="mode-select">
+                        <option value="enToZh" class="mode">英翻中</option>
+                        <option value="zhToEn" class="mode">中翻英</option>
+                        <option value="random" class="mode">隨機</option>
+                    </select>
 
-                <p class="quiz-intro">每輪10題, 選出正確的意思</p>
+                    <select id="countSelect" class="count-select">
+                        <option value="10q" class="mode">10題</option>
+                        <option value="20q" class="mode">20題</option>
+                        <option value="30q" class="mode">30題</option>
+                        <option value="40q" class="mode">40題</option>
+                        <option value="50q" class="mode">50題</option>
+                        <option value="60q" class="mode">60題</option>
+                        <option value="70q" class="mode">70題</option>
+                        <option value="80q" class="mode">80題</option>
+                        <option value="90q" class="mode">90題</option>
+                        <option value="100q" class="mode">100題</option>
+                    </select>
+
+                </div>
+
+                <p class="quiz-intro">Time to quiz yourself!</p>
                 <button id="startQuizBtn" class="big-btn">開始測驗</button>
             </div>
 
