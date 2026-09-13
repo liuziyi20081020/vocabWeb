@@ -64,7 +64,6 @@ body.light-mode .slogan{
     cursor: pointer;
 }
 
-
 .tab-btn-active {
     background-color: var(--text);
     color: var(--accent);

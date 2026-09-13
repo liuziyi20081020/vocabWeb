@@ -10,7 +10,7 @@ const words = [
     {word: "Calibration", meaning:"校準、標定", example:"The equipment requires precise calibration before use."}, 
     {word: "Arcane", meaning:"神祕的、晦澀難懂的", example:"He enjoys reading books about arcane history."}, 
     {word: "Monotonous", meaning:"單調乏味的", example:"Factory work can sometimes be very monotonous."}, 
-    {word: "Enlighten", meaning:"工廠的工作有時非常單調乏味", example:"The lecture helped enlighten us on the topic."}, 
+    {word: "Enlighten", meaning:"啟發", example:"The lecture helped enlighten us on the topic."}, 
     {word: "Malice", meaning:"惡意、敵意", example:"She bore no malice toward her opponents."}, 
     {word: "Perpetual", meaning:"永久的、持續不斷的", example:"They live in a state of perpetual fear."}, 
     {word: "Auxiliary", meaning:"輔助的、備用的", example:"He hospital has an auxiliary generator for power outages."}, 
@@ -28,7 +28,6 @@ const words = [
     {word: " Chastise", meaning:"嚴厲責備、懲戒", example:"The teacher had to chastise the student for cheating."}, 
     {word: "Curtail", meaning:"縮減、限制", example:"We must curtail our expenses this month."}, 
     {word: "Harbinger", meaning:"前兆", example:"Warm breeze is often a harbinger of spring."}, 
-
     { word: "integration", pos: "n.", meaning: "整合", example: "The project requires seamless integration of new software." },
     { word: "intangible", pos: "adj.", meaning: "無形的", example: "Trust is an intangible asset in business." },
     { word: "impose", pos: "v.", meaning: "強加", example: "The government imposed new tax regulations." },
@@ -422,9 +421,5 @@ const words = [
     { word: "oblique", pos: "adj.", meaning: "傾斜的、間接的", example: "He made an oblique reference to his past career." },
     { word: "sobriety", pos: "n.", meaning: "清醒、嚴肅", example: "The solemn occasion called for complete sobriety." },
     { word: "travesty", pos: "n.", meaning: "滑稽的模仿、歪曲（鬧劇）", example: "The trial was considered a complete travesty of justice." },
-
-
-
-
 ];
     
